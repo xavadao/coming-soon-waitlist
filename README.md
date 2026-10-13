@@ -1,78 +1,53 @@
-# Next.js App Router Starter
+# Vibed Waitlist
 
-A minimal starter for fullstack apps with the Next.js App Router. The default UI is a single centered **Nullshot Beta** line so you can grow the app from a clean slate.
+A coming-soon landing page for the fictional Nexus product, with an interactive email signup demo.
+
+Live demo: [https://vibed-waitlist.xavainf.com](https://vibed-waitlist.xavainf.com)
 
 ## Features
 
-- `src/app/` directory routing
-- `layout.tsx`, `loading.tsx`, `not-found.tsx`, and metadata
-- Tailwind CSS v4 via `src/app/globals.css`
-- Ready for thin route handlers in `src/app/api/**/route.ts`
-- Backend layering: `src/services/` for business logic, `src/repositories/` for SQL/data access
-- Feature-oriented frontend placeholders: `src/features/`, `src/components/ui/`, `src/components/common/`
-- Optional local OpenNext + Wrangler workflow for Cloudflare preview/testing
+- Responsive hero with bundled original artwork
+- Email validation, loading, error, and success states
+- Countdown, product preview, and social sharing
+- Same-origin Worker endpoint at `POST /api/waitlist`
 
-## App structure (conventions)
+## Run locally
 
-| Area | Purpose |
-|------|---------|
-| `src/app/**` | Routes, layouts, `loading.tsx` / `not-found.tsx`, and route handlers only. Compose UI from features and shared components; keep files thin. |
-| `src/features/<name>/` | Product features: `components/`, `hooks/`, `lib/`, `utils/`, `types.ts`, and a selective `index.ts` barrel. Hooks own data fetching and state; components stay declarative. |
-| `src/components/ui/` | Low-level, reusable UI primitives (e.g. shadcn-style building blocks). |
-| `src/components/common/` | App-wide reusable components that are not tied to one feature. |
-| `src/lib/` | Cross-cutting helpers (e.g. runtime, crypto) — not feature business logic. |
-| `src/services/` | Server-side business logic called from route handlers or Server Actions. |
-| `src/repositories/` | D1/SQL and data access only. |
+Requires Node.js 22.13 or newer and pnpm 11.13.0.
 
-Avoid wildcard barrel exports (`export * from`) to prevent name collisions and bundle bloat. Prefer direct imports for heavy third-party packages where it helps tree-shaking (see Vercel React best practices).
-
-Cursor rules for agents live in `.cursor/rules/`.
-
-## Local Development
-
-1. Install dependencies with `pnpm install`.
-2. Copy `.dev.vars.example` to `.dev.vars` and add any secrets/runtime vars you need for local OpenNext/Cloudflare access.
-3. Add `.sql` files under `migrations/` when your app uses D1-backed features.
-4. Run `pnpm dev` for normal Next.js local development. The template runs `pnpm migrate:local` in `predev` so the default local D1 schema is applied automatically.
-5. Run `pnpm preview` to build with OpenNext and preview through Wrangler locally.
-6. If your app uses D1 with the default `DB` binding in `wrangler.jsonc`, run `pnpm migrate:local` manually when you want to re-apply local migrations outside `pnpm dev`, and `pnpm migrate:prod` for remote production migrations.
-7. Run `pnpm cf-typegen` after changing `wrangler.jsonc` bindings so `worker-configuration.d.ts` stays in sync.
-
-## Runtime Notes
-
-Build the app using normal App Router conventions in `src/app/`.
-Use `src/app/api/**/route.ts` or Server Actions for server-side behavior.
-Keep route handlers thin: request parsing and response shaping belong in the route, while business logic belongs in `src/services/` and SQL/D1 access belongs in `src/repositories/`.
-
-This template ships optional local OpenNext/Wrangler config so the app can run standalone on your machine.
-Playground preview and remote deploy still use the platform's custom Next-compatible runtime instead of relying on `.open-next` output.
-
-For D1-backed features such as the default auth starter, keep schema files in `migrations/`.
-The built-in migration scripts assume the default D1 binding name is `DB`.
-
-## File Structure
-
-```txt
-src/
-  app/
-    layout.tsx
-    page.tsx
-    globals.css
-    loading.tsx
-    not-found.tsx
-  components/
-    providers.tsx
-    common/
-    ui/
-  features/
-  lib/
-  services/
-  repositories/
-migrations/
-  README.md
-.cursor/
-  rules/
-.dev.vars.example
-worker-configuration.d.ts
-wrangler.jsonc
+```sh
+pnpm install
+pnpm dev
 ```
+
+Use `pnpm dev` for fast UI development at http://localhost:3000. Use `pnpm preview` to build and run the production Cloudflare serving configuration locally at http://localhost:8787. Signup requires `pnpm preview`, because the API runs in the Worker rather than the Next.js development server.
+
+## Build and preview
+
+```sh
+pnpm build
+pnpm start
+```
+
+`pnpm build` checks TypeScript and generates `out/`. `pnpm start` serves that existing build through Wrangler. `pnpm preview` combines both steps.
+
+Run the Worker integration checks with `pnpm test`. They verify valid signup, duplicate normalization, invalid emails, malformed JSON, unsupported methods, static page serving, and 404 responses. Set `TEST_PORT` if the default test port 8793 is occupied.
+
+## Deploy
+
+```sh
+pnpm exec wrangler login
+pnpm deploy
+```
+
+Deployment builds the site and uploads it to Cloudflare Workers. `wrangler.jsonc` sets the Worker name to `vibed-waitlist` and the custom domain to `vibed-waitlist.xavainf.com`. The deploying account needs access to the configured Cloudflare account and the `xavainf.com` zone. To host your own copy, update the account, Worker name, and domain first.
+
+## Runtime
+
+Next.js 16 and React 19 build the site into static HTML, CSS, and JavaScript in `out/`. Cloudflare Workers Static Assets serves those files; no Next.js server runs in production. A small `WorkerEntrypoint` in `src/worker.ts` handles `/api/waitlist`, while the `ASSETS` binding serves the page and its files.
+
+Source pages and components live in `src/`; bundled assets live in `public/`. Generated build output and local credentials are ignored by Git.
+
+## Demo limitations
+
+The signup endpoint keeps normalized emails in an in-memory Set inside each Worker isolate. Data resets when that isolate restarts and is not shared between isolates. Counts and duplicate checks are demonstration behavior. No mailing-list provider, persistent database, or launch notification service is connected. The displayed social proof, countdown, and product preview are example content; footer links are placeholders.

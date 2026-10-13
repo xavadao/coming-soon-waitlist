@@ -1,31 +1,27 @@
 {
-  "name": "jam-app",
+  "name": "vibed-waitlist",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "predev": "node scripts/migrate-if-db.mjs",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "tsc --noEmit && next build",
-    "start": "next start",
+    "preview": "pnpm build && wrangler dev",
+    "start": "wrangler dev",
+    "deploy": "pnpm build && wrangler deploy",
     "lint": "eslint . --config eslint.config.mjs",
-    "migrate:local": "wrangler d1 migrations apply DB --local --config wrangler.jsonc",
-    "migrate:prod": "wrangler d1 migrations apply DB --remote --config wrangler.jsonc",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.jsonc",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.jsonc",
-    "cf-typegen": "wrangler types --config wrangler.jsonc --include-runtime false"
+    "test": "pnpm build && node --test test/waitlist.test.mjs"
   },
   "dependencies": {
     "@tanstack/react-query": "5.90.20",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "react-server-dom-webpack": "19.2.3"
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20260317.1",
-    "@opennextjs/cloudflare": "1.16.5",
     "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "22.20.5",
     "@types/react": "19.2.3",
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.2",
@@ -35,5 +31,8 @@
     "typescript": "5.8.3",
     "wrangler": "4.77.0"
   },
-  "peerDependencies": {}
+  "packageManager": "pnpm@11.13.0",
+  "engines": {
+    "node": ">=22.13.0"
+  }
 }
