@@ -1,0 +1,240 @@
+{
+  "project": "Coming Soon / Waitlist",
+  "exportedAt": "2026-10-13T09:11:28.705601+00:00",
+  "source": {
+    "backend": "Cloudflare Artifacts",
+    "namespace": "workspace",
+    "repository": "jam-0428ad97-ba84-4cfb-9ce9-1b2b7efc7f60",
+    "jamId": "0428ad97-ba84-4cfb-9ce9-1b2b7efc7f60",
+    "roomId": "0428ad97-ba84-4cfb-9ce9-1b2b7efc7f60",
+    "ref": "0428ad97-ba84-4cfb-9ce9-1b2b7efc7f60",
+    "commit": "59de0c9cf3bb2bcb5e6584882b82cd2a19aecfd4",
+    "tree": "e75b809df3701f01aeee5e35949999553aa236e0",
+    "jamUrl": "https://nullshot.ai/jam/0428ad97-ba84-4cfb-9ce9-1b2b7efc7f60/room/0428ad97-ba84-4cfb-9ce9-1b2b7efc7f60",
+    "previewUrl": "https://dev-0428ad97-ba84-4cfb-9ce9-1b2b7efc7f60.nullshot.dev/"
+  },
+  "destination": {
+    "repository": "xavadao/coming-soon-waitlist",
+    "branch": "import/nullshot",
+    "visibility": "private"
+  },
+  "sourceFileCount": 30,
+  "sourceFiles": [
+    {
+      "path": "AGENTS.md",
+      "gitBlob": "381558e81d541de9bc53b08af1111761ab9010ad",
+      "gitMode": "100644",
+      "bytes": 2482,
+      "sha256": "c85b02d7da837e526da6561e4184e76d2e3029155594025bdbdb1dc3803b1f94"
+    },
+    {
+      "path": "README.md",
+      "gitBlob": "5241c3ff8147bbaa9b6949e85dbc46e8c5c12dd1",
+      "gitMode": "100644",
+      "bytes": 3749,
+      "sha256": "84f21fa28c9f20c89cd677d6f944914f63e73b14b71ae85636e10926c18b9c32"
+    },
+    {
+      "path": "css.d.ts",
+      "gitBlob": "f0cede35534d0a1a9e85c2c0ae8d53f45d48a42c",
+      "gitMode": "100644",
+      "bytes": 188,
+      "sha256": "c12ff24721e3848fd66d89ee0ba4cdf73b41f8012980bb0958c84522a83e9bbf"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "gitBlob": "2df50297cf93cda14a9b73308411e43af6a791f0",
+      "gitMode": "100644",
+      "bytes": 5918,
+      "sha256": "32b64f34456b691b4cf488f2b82db8a552487b7ddddd842a0504a49bb078554b"
+    },
+    {
+      "path": "migrations/README.md",
+      "gitBlob": "6af20dba9daf9d3583dadf2cd3b748d75e3d8edc",
+      "gitMode": "100644",
+      "bytes": 416,
+      "sha256": "6cd80911d35c6ab7c312818a69631fcee57301882b4c80653fd60db658f626b0"
+    },
+    {
+      "path": "next-env.d.ts",
+      "gitBlob": "c4b7818fbb2c2c34c24feb1b627ee824507c5600",
+      "gitMode": "100644",
+      "bytes": 251,
+      "sha256": "7ad303e40d4fddf44f156129e397511953a71481c5cfd86b1862649aaaf240cc"
+    },
+    {
+      "path": "next.config.js",
+      "gitBlob": "f061571226a7724aeee870422726acdb1b68046b",
+      "gitMode": "100644",
+      "bytes": 631,
+      "sha256": "28aa6f5df3dc0cbd4fe9a9cc56c7f3e83a8452351e174735c0f1fa16169a05db"
+    },
+    {
+      "path": "open-next.config.ts",
+      "gitBlob": "f189176e94998e084dfd9ec365a107db75284f5e",
+      "gitMode": "100644",
+      "bytes": 114,
+      "sha256": "99b1f6af1490c2a7fb87b2e9de8933cf6d5dc10b3946d92a799807cac4976b59"
+    },
+    {
+      "path": "package.json",
+      "gitBlob": "efaa51cc935f211ab796fab0b19f9c1e8c1b1f27",
+      "gitMode": "100644",
+      "bytes": 1359,
+      "sha256": "37823f07577a7f0a2b6aaef240d8103701530ea2edec5fc80c3d44a3236d273c"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "gitBlob": "f5ec03eb40944148e446d800146421a7d2745117",
+      "gitMode": "100644",
+      "bytes": 142,
+      "sha256": "8a5dbe36e0d27e7d8a842448d1647cf2d0b818eedde29d4610fb2f0bc14856bf"
+    },
+    {
+      "path": "public/favicon.svg",
+      "gitBlob": "2105fcee35653e12a2245af1ddc7508b29b7c668",
+      "gitMode": "100644",
+      "bytes": 476,
+      "sha256": "9f4b8fcd39aa6ab0ce1c47c679453cc594ec6a6eb3d981da0046c8697034b832"
+    },
+    {
+      "path": "scripts/migrate-if-db.mjs",
+      "gitBlob": "6752bcd16b961f3ff58866de027b94268dc77c01",
+      "gitMode": "100644",
+      "bytes": 334,
+      "sha256": "d077c5cc35070f082abc1b877ad906d1c90db542290119f3288ed4c90064bacb"
+    },
+    {
+      "path": "src/app/api/waitlist/route.ts",
+      "gitBlob": "dbe4c0fba4fdee26c09a5e050b994dfa43e839b0",
+      "gitMode": "100644",
+      "bytes": 1038,
+      "sha256": "a3482814800f1a50f40e744bd584abf6bd0a2ade93f763fcd3d701117d35311f"
+    },
+    {
+      "path": "src/app/globals.css",
+      "gitBlob": "400611d6fcf019ec7c9ac30381e79828b4e6e051",
+      "gitMode": "100644",
+      "bytes": 6481,
+      "sha256": "5f9ca131879faab4a61f54aedb4580e3213d6d29b60ab0f9fe7ea02965b5d69e"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "gitBlob": "c45edd3af68dc342044f4c51e4a69e98eba2b4fd",
+      "gitMode": "100644",
+      "bytes": 374,
+      "sha256": "d32f03ae647d02b921a41caae8c10386c4ef7f5fd6c4b9cb52e505003c7fa5f8"
+    },
+    {
+      "path": "src/app/loading.tsx",
+      "gitBlob": "5db5dca260c1dd82129895d0bcaab673675ec410",
+      "gitMode": "100644",
+      "bytes": 261,
+      "sha256": "fad4f14ca6c6d6898310372e56930eff12e8bab2fffd17d1d47edb9c11c06306"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "gitBlob": "851741d688102c52ac58f34bf3810f5fc5fe510f",
+      "gitMode": "100644",
+      "bytes": 3433,
+      "sha256": "7c1c60eb73b5431c0ada8e1c7d5fbb2b6d4243586bd224c53db6f0dc84e9f441"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "gitBlob": "a754b32a398030be8e1e647d933a7810dd62b308",
+      "gitMode": "100644",
+      "bytes": 7688,
+      "sha256": "076cc0d3879f5b765aa351b9d74cfba902855079fa071560f7836af9524f8250"
+    },
+    {
+      "path": "src/app/page.tsx.new",
+      "gitBlob": "4f622710f0f1776fc28946e77a7ca9bc9cb53ba2",
+      "gitMode": "100644",
+      "bytes": 5717,
+      "sha256": "848c79e865d99422fdcc1289731e9e762590d3b5f8285ccf49b6e0620e238423"
+    },
+    {
+      "path": "src/components/providers.tsx",
+      "gitBlob": "da819d1906b19c7c600cd84077ccbdeef6a86836",
+      "gitMode": "100644",
+      "bytes": 477,
+      "sha256": "76c0c1ed42fdaec21a6b3d645b7bf78f74a749e09c49d65e2656f133dfc55d8e"
+    },
+    {
+      "path": "src/components/waitlist/CountdownTimer.tsx",
+      "gitBlob": "e9f7dd77524fb368eb971612477526dfd2ed404a",
+      "gitMode": "100644",
+      "bytes": 3565,
+      "sha256": "28f0abe499468af999db7a2569a1abf5c159c15ccf7a65459a308ac77740a3e1"
+    },
+    {
+      "path": "src/components/waitlist/DemoSection.tsx",
+      "gitBlob": "9d86623892a67a1b53d74a2eafa66e0f70563b7a",
+      "gitMode": "100644",
+      "bytes": 5821,
+      "sha256": "424affd0ab0f891ff7e3af177be3c2927be17cc27ec59f3b5b147c3801fb48f8"
+    },
+    {
+      "path": "src/components/waitlist/EmailForm.tsx",
+      "gitBlob": "40e013b170d9c21b9701ef8dc3b770f7d27a2e56",
+      "gitMode": "100644",
+      "bytes": 4782,
+      "sha256": "61bfe771b211007ee08a3a95b0e21adf016f2dec0b3228d11f9fa0ea62c36f22"
+    },
+    {
+      "path": "src/components/waitlist/SocialProof.tsx",
+      "gitBlob": "b45fd206b85f2d4a5f8f7aacca62a7cf1857c40e",
+      "gitMode": "100644",
+      "bytes": 1435,
+      "sha256": "7ef387b7ba8fe38b9629dc9f3d89da0e0ac6cb0af54ecb37fdc5fc848ff4d865"
+    },
+    {
+      "path": "src/components/waitlist/SocialShare.tsx",
+      "gitBlob": "5624ee30f0b79ec41cf71f18b854a15cc40c34d9",
+      "gitMode": "100644",
+      "bytes": 4695,
+      "sha256": "84b3b537fa7a58b38970d844c98286474a4607fd64d716f8c9f5c4dae7b9711a"
+    },
+    {
+      "path": "src/lib/crypto.ts",
+      "gitBlob": "7d16c954d56f21915ad12d0561b826ffb8cfd080",
+      "gitMode": "100644",
+      "bytes": 227,
+      "sha256": "1c24a966142b07cdaac0dc1be4ad5d13194383fdc469c59bc689dac4fdf48532"
+    },
+    {
+      "path": "src/react-app/jam-preview-media.json",
+      "gitBlob": "d84130c2f15c2abaf0a4ecd65f7fcae38aecbd3a",
+      "gitMode": "100644",
+      "bytes": 530,
+      "sha256": "8aca243f461c0d3d5060ed66f6e725ea1a698477c4f72a3a5964de9f48ca5528"
+    },
+    {
+      "path": "tsconfig.json",
+      "gitBlob": "f02bfeab61ce37c94a8e5110bbf5b581395bc77f",
+      "gitMode": "100644",
+      "bytes": 951,
+      "sha256": "d7cee6f0870eecddf01ca3773175d1d1f9f30160ad3569b96b0d0064fb313411"
+    },
+    {
+      "path": "worker-configuration.d.ts",
+      "gitBlob": "36007d927c0429925a8fd0f5d1995f426a2a909a",
+      "gitMode": "100644",
+      "bytes": 46,
+      "sha256": "2c8f4fba1443a922391fa807ac130d4121d79d84fe1975c8d43b7b7f12282e25"
+    },
+    {
+      "path": "wrangler.jsonc",
+      "gitBlob": "4ed0de188a38b567a8d5cbc1ccfc7db60342d7c0",
+      "gitMode": "100644",
+      "bytes": 436,
+      "sha256": "34561980db2b665b4009f44fac2a583467bc9d12a5470195b3e7e0b8eb28f3ce"
+    }
+  ],
+  "excludedFiles": [],
+  "verification": {
+    "sourceBytes": "verified against each Git blob",
+    "credentialPatternScan": "passed",
+    "buildAndRuntimeTests": "not run; source export only"
+  }
+}
