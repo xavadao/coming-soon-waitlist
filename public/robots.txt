@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://vibed-waitlist.xavainf.com/sitemap.xml

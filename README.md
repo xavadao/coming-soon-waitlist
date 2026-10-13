@@ -11,6 +11,10 @@ Live demo: [https://vibed-waitlist.xavainf.com](https://vibed-waitlist.xavainf.c
 - Countdown, product preview, and social sharing
 - Same-origin Worker endpoint at `POST /api/waitlist`
 
+## Search and accessibility
+
+Every page includes a keyboard-accessible “Made with XavaInf” credit, descriptive page metadata, a canonical URL, and social preview metadata. `robots.txt`, `sitemap.xml`, and `llms.txt` describe the published demo routes and limitations. Structured data identifies the site as a creative demonstration, without product ratings or customer claims. Keyboard focus and reduced motion are supported.
+
 ## Run locally
 
 Requires Node.js 22.13 or newer and pnpm 11.13.0.

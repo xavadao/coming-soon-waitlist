@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
 	return (
-		<div
+		<main id="main-content" tabIndex={-1}
 			className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden noise-bg"
 			style={{ background: '#050505' }}
 		>
@@ -102,6 +102,6 @@ export default function NotFound() {
 					Nexus · Made by Ashley Smith
 				</p>
 			</div>
-		</div>
+		</main>
 	);
 }

@@ -55,7 +55,7 @@ export function EmailForm() {
 	/* ── Success state ── */
 	if (mutation.isSuccess) {
 		return (
-			<div className="animate-scale-in flex flex-col items-center gap-3 py-1">
+			<div className="animate-scale-in flex flex-col items-center gap-3 py-1" role="status" aria-live="polite">
 				<div
 					className="inline-flex items-center gap-3.5 px-6 py-4 rounded-2xl"
 					style={{
@@ -118,6 +118,11 @@ export function EmailForm() {
 						disabled={mutation.isPending}
 						autoComplete="email"
 						aria-label="Email address"
+              name="email"
+              inputMode="email"
+              spellCheck={false}
+              aria-invalid={Boolean(errorMessage)}
+              aria-describedby={errorMessage ? 'waitlist-error' : undefined}
 					/>
 				</div>
 				{/* CTA button */}
@@ -146,7 +151,7 @@ export function EmailForm() {
 				</button>
 			</div>
 			{errorMessage && (
-				<p className="mt-2.5 text-xs text-center animate-fade-in" style={{ color: 'rgba(255,100,100,0.9)' }}>
+				<p id="waitlist-error" role="alert" className="mt-2.5 text-xs text-center animate-fade-in" style={{ color: 'rgba(255,100,100,0.9)' }}>
 					{errorMessage}
 				</p>
 			)}

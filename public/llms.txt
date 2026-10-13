@@ -1,0 +1,15 @@
+# Nexus Launch Waitlist
+
+> Try a coming-soon website demo with original artwork, countdown, sharing, and validated signup. Signup is temporary and sends no launch notifications.
+
+## About this demonstration
+
+This is a fictional launch demonstration. POST /api/waitlist validates email and stores it only in temporary Worker-isolate memory. No mailing list or launch notification is created.
+
+## Pages
+
+- [Nexus Launch Waitlist — Coming-Soon Website Demo](https://vibed-waitlist.xavainf.com/): Try a coming-soon website demo with original artwork, countdown, sharing, and validated signup. Signup is temporary and sends no launch notifications.
+
+## Creator
+
+Made with [XavaInf](https://xavainf.com).

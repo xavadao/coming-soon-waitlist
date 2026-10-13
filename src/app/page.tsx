@@ -10,10 +10,7 @@ import { SocialShare } from '@/components/waitlist/SocialShare';
 const SHOW_VIDEO = true;
 // ─────────────────────────────────────────────────────────────
 
-export const metadata = {
-	title: 'Nexus — Coming Soon',
-	description: 'Be among the first to experience Nexus. Join the waitlist and get early access.',
-};
+
 
 export default function HomePage() {
 	return (
@@ -74,7 +71,7 @@ export default function HomePage() {
 				/>
 			</div>
 
-			<main className="relative z-10">
+			<main id="main-content" tabIndex={-1} className="relative z-10">
 
 				{/* ════════════════════════════════════════════
 				    HERO SECTION
@@ -89,7 +86,7 @@ export default function HomePage() {
 					{/* Hero content — 1200px/92vw ensures headline fits two lines */}
 					<div
 						className="relative z-10 flex flex-col items-center mx-auto"
-						style={{ maxWidth: '1200px', width: '92vw', gap: '0' }}
+						style={{ maxWidth: '1200px', width: '100%', gap: '0' }}
 					>
 						{/* Badge */}
 						<div
@@ -122,7 +119,7 @@ export default function HomePage() {
 						<h1
 							className="animate-fade-in-up delay-100"
 							style={{
-								fontSize: 'clamp(58px, 6vw, 96px)',
+								fontSize: 'clamp(40px, 6vw, 96px)',
 								fontWeight: 900,
 								lineHeight: 1.08,
 								letterSpacing: '-0.03em',
@@ -133,7 +130,7 @@ export default function HomePage() {
 								width: '100%',
 							}}
 						>
-							<span style={{ marginRight: '0.12em' }}>Good</span>things come to
+							Good things come to
 							<br />
 							{'those who '}
 							<em

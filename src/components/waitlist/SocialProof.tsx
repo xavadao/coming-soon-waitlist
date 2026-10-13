@@ -9,7 +9,7 @@ export function SocialProof() {
 	];
 
 	return (
-		<div className="flex items-center gap-3 justify-center">
+		<div className="flex flex-wrap items-center gap-3 justify-center">
 			{/* Avatar stack */}
 			<div className="flex items-center">
 				{avatars.map((a, i) => (
