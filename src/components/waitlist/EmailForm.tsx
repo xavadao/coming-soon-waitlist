@@ -80,10 +80,10 @@ export function EmailForm() {
 					</div>
 					<div className="text-left">
 						<p style={{ fontSize: '14px', fontWeight: 600, color: 'rgba(255,255,255,0.9)', lineHeight: 1.3 }}>
-							You&apos;re on the waitlist
+							Demo signup complete
 						</p>
 						<p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.45)', marginTop: '3px' }}>
-							We&apos;ll notify you when we launch.
+							This example does not send launch notifications.
 						</p>
 					</div>
 				</div>
