@@ -4,6 +4,8 @@ A coming-soon landing page for the fictional Nexus product, with an interactive 
 
 Live demo: [https://vibed-waitlist.xavainf.com](https://vibed-waitlist.xavainf.com)
 
+Source: [View source on GitHub](https://github.com/xavadao/coming-soon-waitlist). This open-source website example is published for community review and development.
+
 ## Features
 
 - Responsive hero with bundled original artwork
@@ -13,7 +15,7 @@ Live demo: [https://vibed-waitlist.xavainf.com](https://vibed-waitlist.xavainf.c
 
 ## Search and accessibility
 
-Every page includes a keyboard-accessible “Made with XavaInf” credit, descriptive page metadata, a canonical URL, and social preview metadata. `robots.txt`, `sitemap.xml`, and `llms.txt` describe the published demo routes and limitations. Structured data identifies the site as a creative demonstration, without product ratings or customer claims. Keyboard focus and reduced motion are supported.
+Every page includes a fixed bottom-right, keyboard-accessible “Made with XavaInf” badge linking to https://xavainf.com and a visible “View source on GitHub” footer link. The badge stays in place while scrolling, with safe-area spacing and footer clearance; demo disclosures remain in the page flow. Pages also include descriptive page metadata, a canonical URL, and social preview metadata. `robots.txt`, `sitemap.xml`, and `llms.txt` describe the published demo routes and limitations. Structured data identifies the site as a creative demonstration, without product ratings or customer claims. Keyboard focus and reduced motion are supported.
 
 ## Run locally
 
@@ -55,3 +57,7 @@ Source pages and components live in `src/`; bundled assets live in `public/`. Ge
 ## Demo limitations
 
 The signup endpoint keeps normalized emails in an in-memory Set inside each Worker isolate. Data resets when that isolate restarts and is not shared between isolates. Counts and duplicate checks are demonstration behavior. No mailing-list provider, persistent database, or launch notification service is connected. The displayed social proof, countdown, and product preview are example content; footer links are placeholders.
+
+## License
+
+Authored project source is available under the [MIT License](LICENSE). Third-party images, fonts, dependencies, and other materials retain their respective terms; see [Third-party notices](THIRD_PARTY_NOTICES.md).

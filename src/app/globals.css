@@ -235,7 +235,7 @@
 	background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
 }
 
-/* Shared credit stays in document flow so it never covers controls. */
+/* Disclosure and source remain in flow; reserve room for the floating credit. */
 .example-credit {
   position: relative;
   display: flex;
@@ -244,11 +244,16 @@
   flex-direction: column;
   gap: 0.5rem;
   text-align: center;
-  padding: 1rem 1.5rem calc(1rem + env(safe-area-inset-bottom));
+  padding: 1rem 1.5rem calc(5.75rem + env(safe-area-inset-bottom));
   background: hsl(var(--background));
   color: hsl(var(--foreground));
 }
 .example-credit-link {
+  position: fixed;
+  right: max(0.75rem, env(safe-area-inset-right));
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  z-index: 110;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.3);
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
@@ -258,9 +263,11 @@
   border-radius: 999px;
   font-size: 0.75rem;
   line-height: 1.4;
+  background: hsl(var(--background));
   text-decoration: none;
 }
 .example-credit-link:hover { text-decoration: underline; }
+.example-source-link { display: inline-flex; align-items: center; gap: 0.375rem; min-height: 2.75rem; padding: 0.5rem 0.75rem; font-size: 0.8125rem; text-decoration: underline; text-underline-offset: 0.2em; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 2px solid hsl(var(--ring));
   outline-offset: 4px;
